@@ -1,0 +1,7 @@
+[build]
+target = "riscv64gc-unknown-none-elf" # Default compilation target: Riscv64 bare machine
+
+[target.riscv64gc-unknown-none-elf]
+rustflags = [
+    "-C", "link-arg=-Tsrc/linker.ld", # Tell the linker, use the link script we wrote
+]
